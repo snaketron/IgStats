@@ -1,0 +1,36 @@
+Package: IgStats
+Type: Package
+Title: Differential gene usage in immune repertoires
+Version: 1.1.1
+Authors@R: 
+    person(given = "Simo",
+           family = "Kitanovski",
+           role = c("aut", "cre"),
+           email = "simo.kitanovski@uni-due.de")
+Description: Suit of statistical procedures for robust quantification 
+    of various BCR and TCR repertoire properties.
+License: file LICENSE
+Depends: 
+    methods,
+    R (>= 3.6.0),
+    Rcpp (>= 0.12.0),
+    StanHeaders (> 2.18.1)
+Imports: 
+    rstan (>= 2.19.2),
+    reshape2 (>= 1.4.3)
+Suggests: 
+    BiocStyle,
+    knitr,
+    rmarkdown,
+    testthat (>= 2.1.0),
+    ggplot2,
+    ggforce,
+    gridExtra,
+    ggrepel
+Encoding: UTF-8
+LazyData: true
+NeedsCompilation: no
+biocViews: Bayesian
+BugReports: https://github.com/snaketron/IgStats/issues
+RoxygenNote: 6.1.1
+VignetteBuilder: knitr
