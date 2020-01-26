@@ -6,8 +6,8 @@ data {
   real Y [N];                           // CDR3 charge
   int <lower=0> C [Ng];                 // condition ID
   int <lower=0> G [N];                  // sample IDs
-  real prior_mean_condition;  // prior mean in condition (of normal pdf)
-  real <lower=0> prior_sigma_condition; // prior sigma in condition (of normal pdf)
+  real prior_mean;                      // prior mean in condition (of normal pdf)
+  real <lower=0> prior_sigma;           // prior sigma in condition (of normal pdf)
 }
 
 parameters {
@@ -34,7 +34,7 @@ model {
   }
 
   for(c in 1:Nc) {
-    mu_condition[c] ~ normal(prior_mean_condition, prior_sigma_condition);
+    mu_condition[c] ~ normal(prior_mean, prior_sigma);
   }
 
   sigma_condition ~ cauchy(0, 1);
